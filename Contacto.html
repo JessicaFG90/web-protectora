@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Tres Huellas AHB - Contacto</title>
+    <link rel="stylesheet" href="estiloContacto.css">
+</head>
+
+<body>
+    <header>
+        <div id="Logo">
+            <img class="Logo" src="Logo Fundación Tres Huellas AHB.jpg" width="150" height="140">
+            <p id="Fundacion">Fundación Tres Huellas AHB</p>
+        </div>
+        <nav>
+            <a href="Home.html"><strong>Inicio</strong></a>
+            <a href="Adopta.html"><strong>Adopta</strong></a>
+            <a href="Apadrina.html"><strong>Apadrina</strong></a>
+            <a href="Contacto.html"><strong>Contacto</strong></a>
+        </nav>
+    </header>
+
+    
+    <div class="FormularioContacto">
+        <h1>Formulario de Contacto</h1>
+        <p class="Subtexto">Rellena el formulario y nos pondremos en contacto contigo.</p>
+        
+        <form action="/enviar-formulario.php" method="post">
+            <div class="DetalleFormulario">
+                <label for="nombre">Nombre completo <span class="Requerido">*</span></label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="DetalleFormulario">
+                <label for="email">Email <span class="Requerido">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="DetalleFormulario">
+                <label for="telefono">Teléfono <span class="Requerido">*</span></label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="DetalleFormulario">
+                <label for="motivo">Motivo del contacto <span class="Requerido">*</span></label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="adoptar">Adoptar</option>
+                    <option value="acoger">Acoger</option>
+                    <option value="apadrinar">Apadrinar</option>
+                    <option value="voluntariado">Voluntariado</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <div class="DetalleFormulario">
+                <label for="mensaje">Mensaje <span class="Requerido">*</span></label>
+                <textarea id="mensaje" placeholder="¡Dinos el nombre del perro o gato que te interese y háblanos un poco de ti en caso que quieras adoptar o acoger!" name="mensaje" required></textarea>
+            </div>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </div>
+
+    <footer>
+    <div class="footerCierre">
+        <p>&copy; 2025 Fundación Tres Huellas AHB 🐾 Todos los derechos reservados. | <a href="https://zooasis.org/politica-de-privacidad/" target="_blank" title="Políticas de Privacidad">Políticas de Privacidad</a> | <a href="https://zooasis.org/aviso-legal/" target="_blank" title="Aviso Legal">Aviso Legal</a></p>
+    </div>
+    </footer>
+</body>
+</html>

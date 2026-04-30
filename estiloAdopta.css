@@ -1,0 +1,250 @@
+/*Cfg general del body con la foto de fondo*/
+body {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 80px; /*Para que el contenido no quede tapado por la cabecera fija*/
+    background-image: url('Fondos Home/Golden.jpeg');
+    background-size: cover; /*La imagen cubre toda la pantalla*/
+    background-position: center;
+    background-repeat: no-repeat; /*Para evitar que la imagen se repita*/
+    background-attachment: fixed; /*La imagen se queda fija al hacer scroll*/
+}
+
+/*Cabecera de la página con el logo, nombre de la protectora y menú de navegación*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*Espacio entre los elementos*/
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgb(170, 144, 87);
+    width: 97,5%;
+    height: 15%;
+    color:rgb(35, 11, 75);
+    font-size: larger;
+    font-style: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/*Imagen del logo*/
+.Logo {
+    display: flex;
+    flex-direction: row;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(170, 144, 87);
+    /*box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);*/
+    position: absolute; /*Saca la imagen del flujo normal del documento para posicionarla como quiera*/
+    transform: translate(50%, 35%); /*Para ajustar la posición de la imagen (izquierda, derecha / arriba, abajo)*/
+    z-index: 1; /*La imagen queda por encima de la caja*/
+}
+
+/*Contenedor del nombre de la protectora*/
+#Fundacion {
+    display: flex;
+    flex-direction: row;
+    transform: translate(35%, 50%);
+    font-size: 50px;
+    font-family: 'Rubik Dirt';
+}
+
+/*Menú de navegación principal*/
+nav {
+    font-family: 'Nunito';
+    display: flex;
+    gap: 30px; /*Espacio entre cada palabra del menú*/
+    flex-wrap: wrap; /*Para que los elementos salten a la siguiente línea si no caben*/
+    margin-left: auto; /*Empuja el menú todo lo posible a la derecha*/
+    margin-top: 80px;
+}
+
+/*Estilo base de los botones del menú de navegación*/
+nav a {
+    color: rgb(35, 11, 75);
+    text-decoration:none; /*Quita el subrayado típico de los enlaces, que aquí queda bastante cutre*/
+    font-size: 18px;
+    position: relative; /*Necesario para ponerle animación*/
+    transition: color 0.3s ease; /*Transición suave del color al hacer la animación*/
+    white-space: nowrap; /*Evita que las palabras del menú se dividan en varias líneas*/
+}
+
+/*Animación del borde superior*/
+nav a::before {
+    content: ''; /*Pseudo-elemento vacío*/
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d8d3b2;
+    transition: width 0.3s ease; /*Transición suave del ancho al hacer la animación*/
+}
+
+/*Animación del borde inferior*/
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: #d8d3b2;
+    transition: width 0.3s ease;
+}
+
+/*Efecto hover - Los bordes crecen y ocupan todo el ancho de cada palabra*/
+nav a:hover::before,
+nav a:hover::after {
+width: 100%;
+color: #d8d3b2;
+}
+
+/*Cambio de color del texto al hacer hover*/
+nav a:hover {
+color: #d8d3b2;
+}
+
+/*Estilo del contenido general de la página*/
+#contenidoGeneral {
+    color: #d8d3b2;
+    font-family: Nunito;
+    font-size: large;
+    display:flex;
+    flex-direction: column;
+}
+
+/*Título y texto de la página de adopciones*/
+.títuloAdopta {
+    padding-top: 130px;
+    padding-left: 40px;
+    font-size: 35px;
+    text-shadow: 0 0 10px rgb(35, 11, 75); /*Sombra en el texto para que se lea mejor sobre la imagen de fondo*/
+}
+
+.textoAdopta {
+    padding-left: 40px;
+    text-shadow: 0 0 10px rgb(35, 11, 75);
+}
+
+/*Catálogo de animales en adopción*/
+#catalogoAdopciones {
+    display: flex;
+    flex-wrap: wrap; /*Para que las tarjetas salten a la siguiente línea si no caben en la misma*/
+    justify-content: center;
+    gap: 25px; /*Espacio entre las tarjetas*/
+    padding: 20px;
+}
+
+/*Estilo de cada tarjeta de animal en adopción*/
+.animalAdopcion {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*Añade sombra en la tarjeta para darle profundidad*/
+    width: 350px; /*Ancho fijo de cada tarjeta*/
+    padding: 0px; /*Elimina el padding para que la imagen ocupe todo el ancho*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /*Espacio entre los elementos*/
+    min-height: 400px; /*Hace que todas las tarjetas tengan la misma altura*/
+    overflow: hidden; /*Para que no se salga nada de la tarjeta*/
+}
+
+.fotoAnimal {
+    width: 100%; /*La imagen ocupa todo el ancho de la tarjeta*/
+    height: 270px;
+    object-fit: cover; /*Ajusta la imagen al contenedor sin distorsionarla*/
+    border-radius: 15px 15px 0px 0px;
+    margin: 0px; /*Elimina el margen para que la imagen ocupe todo el espacio*/
+    display: block; /*Elimina el espacio inferior que aparece en las imágenes por defecto*/
+}
+
+.nombreAnimal {
+    font-family: 'Nunito';
+    font-size: 25px;
+    font-weight: bold;
+    justify-content: center;
+    color: rgb(35, 11, 75);
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+.datosAnimal {
+    font-family: 'Nunito';
+    font-size: 17px;
+    color: rgb(136, 84, 129);
+    margin-top: 0px;
+    padding: 0 10px;
+}
+
+.descripcionAnimal {
+    font-family: 'Nunito';
+    color: rgb(35, 11, 75);
+    align-items: left;
+    margin-top: 10px;
+    font-size: 15px;
+    flex-grow: 1; /*Hace que la descripción ocupe todo el espacio disponible*/
+    padding: 0 10px;
+}
+
+/*Estilo del botón de adoptar*/
+.botonAdoptar {
+    margin: 10px auto 15px;
+    padding: 10px 20px;
+    background-color: rgb(170, 144, 87);
+    color: rgb(35, 11, 75);
+    border: none;
+    border-radius: 0px 50px 50px 50px;
+    cursor: pointer; /*Sale la manita al pasar por encima*/
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block; /*Para que el padding se ajuste al texto*/
+    transition: all 0.3s ease; /*Transición suave para todos los cambios*/
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*Sombra inicial*/
+}
+
+/*Animación al pasar el ratón por encima del botón*/
+.botonAdoptar:hover {
+    transform: translateY(-5px); /*Eleva el botón*/
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /*Sombra más pronunciada*/
+    background-color: rgb(202, 177, 118); /*Aclara el color de fondo*/
+}
+
+.botonAdoptar:active {
+    transform: translateY(0); /*Vuelve a su posición al hacer clic*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*Sombra reducida*/
+}
+
+/*Estilo del pie de página*/
+footer {
+    background-color: rgb(170, 144, 87); /*Mismo color que la cabecera para mantener la coherencia visual*/
+    color: rgb(35, 11, 75);
+    margin-top: 80px; /*Separación del contenido principal*/
+    font-family: Nunito;
+    padding: 8px;
+    width: 99.1%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Estilo del cierre del footer*/
+.footerCierre {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgb(35, 11, 75); /*Línea separadora*/
+    width: 100%;
+}
+
+.footerCierre p {
+    margin: 0;
+    font-size: 14px;
+    color: rgb(35, 11, 75);
+    text-decoration: none;
+}
