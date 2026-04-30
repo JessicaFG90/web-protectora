@@ -4,6 +4,12 @@ Práctica de **HTML y CSS** desarrollada en el módulo de **Lenguaje de Marcas**
 
 ---
 
+## 🖼️ Vista previa de la página principal
+
+![Pantalla principal de la Fundación Tres Huellas AHB](assets/Muestra_Home.JPG)
+
+---
+
 ## 📋 Descripción
 
 Sitio web estático de varias páginas para una fundación ficticia de protección animal llamada **Fundación Tres Huellas AHB**. La web permite a los usuarios conocer los animales disponibles para adopción y apadrinamiento, así como contactar con la fundación.
@@ -57,7 +63,8 @@ Web Protectora/
 ├── estiloContacto.css
 ├── Adopciones Gatos/       ← Imágenes de gatos
 ├── Adopciones Perros/      ← Imágenes de perros
-└── Apadrinar/              ← Imágenes para apadrinar
+├── Apadrinar/              ← Imágenes para apadrinar
+└── assets/                 ← Capturas de pantalla del README
 ```
 
 ---
