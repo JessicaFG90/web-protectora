@@ -71,4 +71,4 @@ Web Protectora/
 
 ## 🎓 Contexto académico
 
-> Práctica de la asignatura **Lenguaje de Marcas** · 1º DAM · Ucademy · 2025/2026
+> Práctica de la asignatura **Lenguaje de Marcas** · 1º DAM · 2025/2026
