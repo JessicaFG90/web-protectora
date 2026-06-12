@@ -10,6 +10,14 @@ body {
     background-position: center;
     background-repeat: no-repeat; /*Para evitar que la imagen se repita*/
     background-attachment: fixed; /*La imagen se queda fija al hacer scroll*/
+    min-height: 100vh; /*Asegura que el fondo cubra toda la altura de la ventana*/
+    display: flex;
+    flex-direction: column;
+}
+
+/*Contenedor principal de la página, que incluye el contenido y el pie de página*/
+main {
+    flex: 1; /*Hace que el main ocupe todo el espacio disponible entre la cabecera y el pie de página*/
 }
 
 /*Contenedor principal de la página*/
